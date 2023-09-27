@@ -152,25 +152,24 @@ body *{
         width: 85%;
     }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 450px) {
     .main-login{
         flex-direction: column;
     }
     .left-login > h1{
         display: none;
+        
     }
     .left-login{
-        width: 100%;
-        height: auto;
+        display:none;
+ 
     }
     .right-login{
-        width: 100%;
+        width: 90%;
         height: auto;
     }
-    .left-login-image{
-        width: 50vw;
-    }
+   
     .card-login{
-        width: 90%;
+        width: 100%;
     }
 }
