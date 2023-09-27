@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Calculadora de Frete - Copobras</title>
+</head>
+<body>
+    <div  class = "main-login"> 
+        <div class = "left-login"> 
+            <h1> DESCUBRA O VALOR DO SEU  <br> FRETE EM SEGUNDOS!</h1> 
+            <img src="logistic.svg" class = "left-login-image"alt="logistic animação"> 
+         </div>
+
+         <div class = "right-login">
+            <div class = "card-login">
+                <h1>CALCULADORA DE FRETE</h1>
+                <div class ='textfield'>
+                    <label for = "city-input">Qual a cidade do destino?</label>
+                    <input type="text" id="city-input" placeholder="Cidade">
+                </div>
+                <div class ='textfield'>
+                    <label for = "volume-input">Qual o volume? (m³)</label>
+                    <input type="text" id="volume-input" placeholder="Volume">
+                </div>
+                
+                <button id='calculate-btn'>Calcular</button>
+                <button id='clear-btn'>Limpar</button>
+                
+                <div class = 'textfield' id="result-container"></div>
+                
+
+            </div>    
+        </div>
+    </div>
+<script src="./modules/functions.js"></script>
+<script src="./modules/dic_regiao_cidade.js"></script>
+<script type="text/javascript" src="main.js"></script>
+ 
+</body>
+</html>
