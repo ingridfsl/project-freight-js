@@ -10,7 +10,8 @@ body *{
 .main-login{
     width: 100vw;
     height: 100vh;
-    background: #201b2c;
+    background-color: #201b2c;
+    overflow: hidden;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -18,8 +19,6 @@ body *{
 
 }
 .left-login{
-    width: 50vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,12 +26,12 @@ body *{
 
 }
 .left-login > h1{
-    font-size: 3vw;
+    font-size: 3em;
     color: white;
 
 }
 .left-login-image {
-    width: 35vw;
+    width: 100%;
 }
 .right-login {
     width: 50vw;
@@ -155,7 +154,9 @@ body *{
         width: 85%;
     }
 }
-@media only screen and (max-width: 450px) {
+
+@media (min-width: 450px) and (max-width: 1024px) {
+  
     .main-login{
         flex-direction: column;
     }
@@ -178,7 +179,8 @@ body *{
         height:85%;
     
     }
-}
+    
+  }
 
 @media (width: 412px){
     .main-login{
