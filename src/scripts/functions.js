@@ -1,4 +1,4 @@
-function function_1(cubagem) {
+export function functionFreight1(cubagem) {
     let valor_constante, valor_frete;
     if (cubagem <= 7) {
         valor_constante = 59;
@@ -20,7 +20,7 @@ function function_1(cubagem) {
     return [valor_frete, valor_constante];
 }
 
-function function_2(cubagem) {
+export function functionFreight2(cubagem) {
     let valor_constante, valor_frete;
     if (cubagem <= 7) {
         valor_constante = 80;
@@ -42,7 +42,7 @@ function function_2(cubagem) {
     return [valor_frete, valor_constante];
 }
 
-function function_3(cubagem) {
+export function functionFreight3(cubagem) {
     let valor_constante, valor_frete;
     if (cubagem <= 7) {
         valor_constante = 52;
@@ -64,7 +64,7 @@ function function_3(cubagem) {
     return [valor_frete, valor_constante];
 }
 
-function function_4(cubagem) {
+export function functionFreight4(cubagem) {
   let valor_constante, valor_frete;
   if (cubagem <= 7) {
       valor_constante = 57;
@@ -87,7 +87,7 @@ function function_4(cubagem) {
 
 }
 
-function function_5(cubagem) {
+export function functionFreight5(cubagem) {
   let valor_constante, valor_frete;
   if (cubagem <= 7) {
       valor_constante = 47;
@@ -109,7 +109,7 @@ function function_5(cubagem) {
   return [valor_frete, valor_constante];
 }
 
-function function_6(cubagem) {
+export function functionFreight6(cubagem) {
     let valor_constante, valor_frete;
     if (cubagem <= 7) {
         valor_constante = 59;
@@ -131,7 +131,7 @@ function function_6(cubagem) {
     return [valor_frete, valor_constante];
 }
 
-function function_7(cubagem) {
+export function functionFreight7(cubagem) {
     let valor_constante, valor_frete;
     if (cubagem <= 7) {
       valor_constante = 70;
@@ -153,7 +153,7 @@ function function_7(cubagem) {
     return [valor_frete, valor_constante];
   }
   
-  function function_8(cubagem) {
+  export function functionFreight8(cubagem) {
     let valor_constante, valor_frete;
     if (cubagem <= 7) {
       valor_constante = 49;
@@ -175,7 +175,7 @@ function function_7(cubagem) {
     return [valor_frete, valor_constante];
   }
   
-  function function_9(cubagem) {
+  export function functionFreight9(cubagem) {
     let valor_constante, valor_frete;
     if (cubagem <= 7) {
       valor_constante = 60;
@@ -197,7 +197,7 @@ function function_7(cubagem) {
     return [valor_frete, valor_constante];
   }
 
-function function_10(cubagem) {
+export function functionFreight10(cubagem) {
     let valor_constante, valor_frete;
     if (cubagem <= 7) {
       valor_constante = 52;
@@ -218,4 +218,3 @@ function function_10(cubagem) {
     return [valor_frete, valor_constante];
 }
 
-module.exports = {function_1, function_2, function_3, function_4, function_5, function_6, function_7, function_8, function_9, function_10};

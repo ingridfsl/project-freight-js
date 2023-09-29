@@ -1,3 +1,6 @@
+import {regiao_cidades} from "./dic-regiao-cidade.js";
+import {functionFreight1, functionFreight2, functionFreight3, functionFreight4, functionFreight5, functionFreight6, functionFreight7, functionFreight8, functionFreight9, functionFreight10} from './functions.js';
+
 const cityInput = document.getElementById('city-input');
 const volumeInput = document.getElementById('volume-input');
 const calculateBtn = document.getElementById('calculate-btn');
@@ -36,42 +39,42 @@ if (!cidadeEncontrada) {
 
     switch (regiao) {
     case 'ALTO CAPIBARIBE':
-        [valorFrete, valorConstante] = function_1(cubagem);
+        [valorFrete, valorConstante] = functionFreight1(cubagem);
         break;
     case 'ARARIPINA':
-        [valorFrete, valorConstante] = function_2(cubagem);
+        [valorFrete, valorConstante] = functionFreight2(cubagem);
         break;
         case 'BREJO PERNAMBUCANO':
-        [valorFrete, valorConstante] = function_3(cubagem);
+        [valorFrete, valorConstante] = functionFreight3(cubagem);
         break;
     case 'GARANHUNS':
     case 'ITAPARICA':
     case 'MATA MERIDIONAL PERNAMBUCANA':
     case 'MATA SETENTRIONAL PERNAMBUCANA':
     case 'MEDIO CAPIBARIBE':
-        [valorFrete, valorConstante] = function_4(cubagem);
+        [valorFrete, valorConstante] = functionFreight4(cubagem);
         break;
     case 'ITAMARACA':
     case 'SUAPE':
-        [valorFrete, valorConstante] = function_5(cubagem);
+        [valorFrete, valorConstante] = functionFreight5(cubagem);
         break;
     case 'PAJEU':
-        [valorFrete, valorConstante] = function_6(cubagem);
+        [valorFrete, valorConstante] = functionFreight6(cubagem);
         break;
     case 'PETROLINA':
-        [valorFrete, valorConstante] = function_7(cubagem);
+        [valorFrete, valorConstante] = functionFreight7(cubagem);
         break;
     case 'RECIFE':
     case 'VITORIA DE SANTO ANTAO':
-        [valorFrete, valorConstante] = function_8(cubagem);
+        [valorFrete, valorConstante] = functionFreight8(cubagem);
         break;
     case 'SALGUEIRO':
     case 'SERTAO DO MOXOTO':
-        [valorFrete, valorConstante] = function_9(cubagem);
+        [valorFrete, valorConstante] = functionFreight9(cubagem);
         break;
     case 'VALE DO IPANEMA':
     case 'VALE DO IPOJUCA':
-        [valorFrete, valorConstante] = function_10(cubagem);
+        [valorFrete, valorConstante] = functionFreight10(cubagem);
         break;
     default:
         

@@ -208,6 +208,55 @@ body *{
   
 
 }
+@media (width: 393px) and (height: 852px) { 
+    .main-login{
+        flex-direction: column;
+    }
+    .left-login > h1{
+        display: none;
+        
+    }
+    .left-login{
+        display:none;
+ 
+    }
+    .right-login{
+        width: 90%;
+        height:100%;
+        
+    }
+   
+    .card-login{
+        width: 100%;
+        height:90%;
+    
+    }
+}
+
+@media (width: 375px) and (height: 812px) { 
+    .main-login{
+        flex-direction: column;
+    }
+    .left-login > h1{
+        display: none;
+        
+    }
+    .left-login{
+        display:none;
+ 
+    }
+    .right-login{
+        width: 90%;
+        height:100%;
+        
+    }
+   
+    .card-login{
+        width: 100%;
+        height:90%;
+    
+    }
+}
     
 @media (width: 360px){
     .main-login{
