@@ -1,9 +1,25 @@
-# project-freight-js - Calculadora de Frete Copobras
+# Calculadora de Frete -  Copobras
 
 ## https://ingridfsl.github.io/project-freight-js/
 
-
-
+## Estrutura de diretórios
+``` bash
+│   index.html  
+│   README.md  
+│  
+└───src  
+    ├───assets    
+    │       logistic.svg  
+    │  
+    ├───scripts  
+    │       dic-regiao-cidade.js  
+    │       functions.js  
+    │       main.js  
+    │  
+    └───styles  
+    │        style.css        
+```
+            
 
 
 
