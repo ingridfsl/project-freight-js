@@ -1,40 +1,63 @@
 import {regiao_cidades} from "./dic-regiao-cidade.js";
 import {functionFreight1, functionFreight2, functionFreight3, functionFreight4, functionFreight5, functionFreight6, functionFreight7, functionFreight8, functionFreight9, functionFreight10} from './functions.js';
 
-const cityInput = document.getElementById('city-input');
+const citySelect = document.getElementById('city-input');
 const volumeInput = document.getElementById('volume-input');
 const calculateBtn = document.getElementById('calculate-btn');
 const clearBtn = document.getElementById('clear-btn');
 const resultContainer = document.getElementById('result-container');
   
+
+// Adiciona a opção de placeholder no início do dropdown
+const placeholderOption = document.createElement('option');
+placeholderOption.value = ''; // Valor vazio
+placeholderOption.textContent = 'Selecione uma cidade';
+placeholderOption.disabled = true; // Desabilita a opção
+placeholderOption.selected = true; // Define como selecionada inicialmente
+citySelect.appendChild(placeholderOption);
+
+
+// Obtém uma lista de todas as cidades
+const todasAsCidades = Object.values(regiao_cidades).flat();
+
+// Ordena as cidades em ordem alfabética
+todasAsCidades.sort((a, b) => removerAcentos(a).localeCompare(removerAcentos(b), 'pt-BR'));
+
+function removerAcentos(texto) {
+    return texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+// Preenche o dropdown com as cidades ordenadas
+for (const cidade of todasAsCidades) {
+    const option = document.createElement('option');
+    option.value = cidade;
+    option.textContent = cidade;
+    citySelect.appendChild(option);
+}
+
 calculateBtn.addEventListener('click', () => {
-const city = cityInput.value.toUpperCase();
-const cubagem = parseFloat(volumeInput.value.replace(',', '.'));
-let regiao = '';
-if (city.trim() === '' || isNaN(cubagem)) {
-    resultContainer.textContent = 'Por favor, preencha a cidade e o volume corretamente.';
-    return;
-}
+    const city = citySelect.value.toUpperCase();
+    const cubagem = parseFloat(volumeInput.value.replace(',', '.'));
+    let regiao = '';
 
-clearBtn.addEventListener('click', () => {
-    cityInput.value = '';
-    volumeInput.value = '';
-  
-    resultContainer.textContent = '';
-  });
-
-let cidadeEncontrada = false;
-for (let chave in regiao_cidades) {
-    if (regiao_cidades[chave].includes(city)) {
-    regiao = chave.toString();
-    cidadeEncontrada = true;
-    break;
+    if (city.trim() === '' || isNaN(cubagem)) {
+        resultContainer.textContent = 'Por favor, preencha a cidade e o volume corretamente.';
+        return;
     }
-}
 
-if (!cidadeEncontrada) {
-    resultContainer.textContent = 'Cidade não encontrada. ENTRE EM CONTATO COM A LOGÍSTICA';
-} else {
+    clearBtn.addEventListener('click', () => {
+        citySelect.value = '';
+        volumeInput.value = '';
+        resultContainer.textContent = '';
+    });
+
+    // Atribui diretamente a região com base na cidade selecionada no dropdown
+    for (let chave in regiao_cidades) {
+        if (regiao_cidades[chave].includes(city)) {
+            regiao = chave.toString();
+            break;
+        }
+    }
+
     let valorFrete, valorConstante;
 
     switch (regiao) {
@@ -83,4 +106,4 @@ if (!cidadeEncontrada) {
 
     resultContainer.innerHTML = `Valor do frete: R$ ${valorFrete.toFixed(2)}<p>Valor tabelado do m³: R$ ${valorConstante}</p>`;
 }
-});
+);
